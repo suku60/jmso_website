@@ -4,9 +4,11 @@ import './Home.css';
 const Home = () => {
 
 return (
-<div className='home_box'>
+       <div className='home_box'>
 
-</div>
-)
+           PRUEBas
+       
+       </div>
+    )
 }
 export default Home;

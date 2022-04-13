@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
 .background_box {
     background-color: black;
     height: 100vh;
@@ -9,7 +11,27 @@
     overflow: hidden;
 }
 
-#animationMatrix {
+.text_matrix {
+    font-family: 'Roboto Condensed', sans-serif;
 
-    opacity: 60%;
+    /* text-orientation: sideways; */
+    /* writing-mode: sideways-lr; */
+    /* text-orientation: upright; */
+    /* writing-mode: vertical-lr; */
+
+    
+
+}
+
+.text_matrix:hover {
+
+
+    /* user-select: contain; */
+
+    color: red;
+    
+}
+
+#animation {
+
 }

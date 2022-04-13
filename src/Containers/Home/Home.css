@@ -1,6 +1,13 @@
 .home_box {
     /* design phase 1: done */
     background-color: transparent;
+    color: red;
+
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+
+
 
     height: 100vh;
     width: 60vw;
