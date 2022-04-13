@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import useInterval from '@use-it/interval';
 
 const characters = `010101010101[].::()000001`;
-const stringMutationOdds = 0.1;
+const stringMutationOdds = 0.01;
 
 const beamMinSize = 0;
 const beamMaxSize = characters.length + 5;
