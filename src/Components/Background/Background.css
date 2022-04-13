@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
-.background_box {
+.beam_background_box, .background_box {
     background-color: black;
     height: 100vh;
     width: 100vw;
 
-    position: absolute;
+    position: fixed;
     z-index: -2;
 
     overflow: hidden;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: row;
+
+    opacity: 1;
+    
+    
 }
 
 .text_matrix {
@@ -20,18 +30,78 @@
     /* writing-mode: vertical-lr; */
 
     
+    transition: 3s;
+
+
+    /* user-select: none; */
+    white-space: nowrap;
+
+    margin-left: -9;
+    margin-right: -9;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
+
+    
+    
 
 }
-
-.text_matrix:hover {
+#animation:hover {
 
 
     /* user-select: contain; */
 
-    color: red;
+    color: blue;
     
 }
 
 #animation {
 
+
+    animation: mutateSize 6s infinite;
+
+}
+
+@keyframes mutateSize {
+    0%{
+        transform: skew(2deg) rotate(2deg) scale(1.2);
+
+    }
+    20%{
+        transform: skew(4deg) rotate(5deg) scale(1.2);
+        
+    }
+    21%{
+        transform: skew(1deg) rotate(2deg) scale(1.1);
+        
+    }
+    69%{
+        transform: skew(5deg) rotate(3deg) scale(1.2);
+        
+    }
+    70%{
+        transform: skew(2deg) rotate(2deg) scale(1.1);
+        
+    }
+    80%{
+        transform: skew(4deg) rotate(3deg) scale(1.2);
+        
+    }
+    100%{
+        transform: skew(1deg) rotate(1deg) scale(1.2);
+        
+    }
+
+
+}
+
+.temporary_button {
+    background-color: red;
+
+    height: 4em;
+    width: 10em;
+
+    position: absolute;
+    top: 3em;
+    left: 1em;
+
+    z-index: 4;
 }
