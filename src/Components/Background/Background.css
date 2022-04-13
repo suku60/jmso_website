@@ -38,7 +38,7 @@
 
     margin-left: -9;
     margin-right: -9;
-    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
+    /* text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4); */
 
     
     
@@ -56,33 +56,45 @@
 #animation {
 
 
-    animation: mutateSize 6s infinite;
+    animation: mutateSize .7s infinite;
 
 }
 
 @keyframes mutateSize {
     0%{
-        transform: skew(2deg) rotate(2deg) scale(1.2);
+        transform: skew(1deg) rotate(1deg) scale(1.2);
 
     }
     20%{
-        transform: skew(4deg) rotate(5deg) scale(1.2);
+        transform: skew(1deg) rotate(1deg) scale(1.2);
         
     }
     21%{
-        transform: skew(1deg) rotate(2deg) scale(1.1);
-        
-    }
-    69%{
-        transform: skew(5deg) rotate(3deg) scale(1.2);
-        
-    }
-    70%{
         transform: skew(2deg) rotate(2deg) scale(1.1);
         
     }
-    80%{
-        transform: skew(4deg) rotate(3deg) scale(1.2);
+    40%{
+        transform: skew(2deg) rotate(2deg) scale(1.1);
+        
+    }
+    41%{
+        transform: skew(1deg) rotate(2deg) scale(1.1);
+        
+    }
+    55%{
+        transform: skew(1deg) rotate(2deg) scale(1.1);
+        
+    }
+    56%{
+        transform: skew(2deg) rotate(1deg) scale(1.1);
+        
+    }
+    70%{
+        transform: skew(2deg) rotate(1deg) scale(1.1);
+        
+    }
+    71%{
+        transform: skew(1deg) rotate(1deg) scale(1.2);
         
     }
     100%{
@@ -96,12 +108,26 @@
 .temporary_button {
     background-color: red;
 
-    height: 4em;
-    width: 10em;
+    height: 10vh;
+    width: 10vw;
 
     position: absolute;
-    top: 3em;
-    left: 1em;
+    top: 90vh;
+    left: 0vw;
+
+    cursor: pointer;
+
+    opacity: .1;
 
     z-index: 4;
+}
+
+.button2 {
+    background-color: blue;
+    left: 10vw;
+}
+
+.button3 {
+    background-color: green;
+    left: 20vw;
 }

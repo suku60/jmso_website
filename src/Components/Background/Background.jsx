@@ -3,16 +3,16 @@ import './Background.css';
 import React, { useEffect, useRef, useState } from 'react';
 import useInterval from '@use-it/interval';
 
-const characters = `010101010101[].::()`;
+const characters = `010101010101[].::()000001`;
 const stringMutationOdds = 50;
 
 const beamMinSize = 0;
-const beamMaxSize = characters.length;
+const beamMaxSize = characters.length + 5;
 
-const intervalMinDelay = 66;
+const intervalMinDelay = 6;
 const intervalMaxDelay = 666;
 
-const delayMinBetweenBeams = 666;
+const delayMinBetweenBeams = 66;
 const delayMaxBetweenBeams = 6666;
 
 const randomInRange = (min, max) =>
@@ -28,7 +28,7 @@ const randomBeam = () =>
 
 const getMutatedBeam = beam => {
 	const newBeam = [];
-	for (let i = 1; i < beam.length; i++) {
+	for (let i = .5; i < beam.length; i++) {
 		if (Math.random() < stringMutationOdds) {
 			newBeam.push(randomCharacter());
 		} else {
@@ -90,7 +90,7 @@ const Background = (props) => {
     	return (
     		<div  id="animation"
     			style={{
-                    transition: '1s',
+                    transition: '.2s',
     				writingMode: writingMode,
     				color: '#F23030',
     				textOrientation: textOrientation,
@@ -99,7 +99,7 @@ const Background = (props) => {
     				marginTop: paddingTop,
     				marginLeft: -9,
     				marginRight: -9,
-    				textShadow: '0px 0px 8px rgba(255, 255, 255, 0.4)',
+    				// textShadow: '0px 0px 8px rgba(255, 255, 255, 0.4)',
     				fontSize: 44,
     			}}>
     			{beam.map((char, index) => (
@@ -107,7 +107,7 @@ const Background = (props) => {
     					style={{
     						marginTop: -29,
     						opacity: index < 6 ? 0.1 + index * 0.15 : 1,
-    						color: index === beam.length - 1 ? 'red' : undefined,
+    						color: index === beam.length - 1 ? 'whitesmoke' : undefined,
     						textShadow:
     							index === beam.length - 1
     								? '0px 0px 20px rgba(255, 255, 255, 1)'
@@ -119,6 +119,16 @@ const Background = (props) => {
     		</div>
     	);
     };
+
+    const swapMode = () => {
+        if(writingMode === 'sideways-rl'){
+            setWritingMode('vertical-lr')
+            setTextOrientation('upright')
+        }else{
+            setWritingMode('sideways-rl')
+            setTextOrientation('sideways')
+        }
+    }
     
     const BeamFallBackground = (props) => {
     	const containerRef = useRef(null);
@@ -139,7 +149,7 @@ const Background = (props) => {
     			ref={containerRef}>
     			{new Array(beamCount).fill().map(_ => (
                     <BeamFall height={containerSize?.height} className="text_matrix"/>
-                    ))}
+                ))}
                     
     		</div>
     	);
@@ -149,8 +159,12 @@ const Background = (props) => {
         <div className='background_box'>
             <BeamFallBackground/>
             
-                <div className='temporary_button'>
-                </div>
+            <div className='temporary_button button1' onClick={()=>swapMode()}>
+            </div>
+            <div className='temporary_button button2' onClick={()=>swapMode()}>
+            </div>
+            <div className='temporary_button button3' onClick={()=>swapMode()}>
+            </div>
         </div>
     );
 };
