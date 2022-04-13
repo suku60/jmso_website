@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import useInterval from '@use-it/interval';
 
 const characters = `010101010101[].::()000001`;
-const stringMutationOdds = 50;
+const stringMutationOdds = 0.1;
 
 const beamMinSize = 0;
 const beamMaxSize = characters.length + 5;
@@ -48,7 +48,7 @@ const Background = (props) => {
     const BeamFall = props => {
         const [beam, setBeam] = useState(randomBeam());
     
-    	const [paddingTop, setTopPadding] = useState(beam.length * -50 * randomBeam.length);
+    	const [paddingTop, setTopPadding] = useState(beam.length * randomInRange.length);
     
     	const [intervalDelay, setIntervalDelay] = useState(null);
     
@@ -88,9 +88,10 @@ const Background = (props) => {
     	}, intervalDelay);
     
     	return (
-    		<div  id="animation"
+    		<div  
+            // id="animation"
     			style={{
-                    transition: '.2s',
+                    transition: '.6s',
     				writingMode: writingMode,
     				color: '#F23030',
     				textOrientation: textOrientation,
