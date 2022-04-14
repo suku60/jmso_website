@@ -1,5 +1,6 @@
 .welcome_box {
     background-color: hsl(0, 100%, 50%, .4);
+    border: .11em solid red;
 
     height: 70vh;
     width: 60vw;
@@ -12,6 +13,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    overflow: hidden;
 
     transition: 1s;   
 }
@@ -32,7 +35,7 @@
     left: 7.5vw;    
     width: 85vw;
     }
-  }
+}
 
 @media only screen and (max-width: 750px) {
     .welcome_box {
@@ -63,11 +66,75 @@
     }
 }
 
+.welcome_background_effect {
+    background-color: red;
+    border-radius: 10%;
+
+    height: 90em;
+    width: 90em;
+    
+    position: absolute;
+    z-index: 1;
+    /* initial */
+    /* top: 0%;
+    left: -200%; */
+
+    top: -70%;
+    left: -5%;
+    
+    transform: rotate(15deg);
+
+}
+
+#animationBackgroundFill {
+    animation: rotation steps(10) 2s normal;
+}
+
+@keyframes rotation {
+    0%{
+    top: -0%;
+    left: -200%;
+    transform: rotate(15deg);
+    }
+    10%{
+        top: -10%;
+        left: -135%;
+        transform: rotate(15deg);   
+    }
+    25%{
+    top: -20%;
+    left: -115%;
+        transform: rotate(18deg);
+    }
+    50%{
+    top: -30%;
+    left: -105%;
+        transform: rotate(25deg);
+    }
+    75%{
+    top: -50%;
+    left: -55%;
+    transform: rotate(30deg);
+    }
+    100%{
+    top: -70%;
+    left: -5%;
+        transform: rotate(10deg);
+        }
+}
+
+
+
 /* squares inside */
 
 .welcome_photo {
 
     height: 50%;
     width: 50%;
+    
     background-image: url('https://avatars.githubusercontent.com/u/96541489?v=4');
+
+    position: absolute;
+
+    z-index: 2;
 }

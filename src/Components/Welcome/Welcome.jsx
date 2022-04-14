@@ -5,18 +5,30 @@ const Welcome = () => {
 
     const [bgWelcomeBox, setBgWelcomeBox] = useState("hsl(0, 100%, 50%, .4)");
 
+    const [bgFillPositionTop, setBgFillPositionTop] = useState('0%')
+    const [bgFillPositionLeft, setBgFillPositionLeft] = useState('-200%')
+    const [bgFillId, setBgFillId] = useState('')
+
     const showBgWelcomeBox = () => {
-        if(bgWelcomeBox === "hsl(0, 100%, 50%, .4)"){
-            setBgWelcomeBox("hsl(0, 100%, 50%, .9)")
+        if(bgFillId === ""){
+            setBgFillId("animationBackgroundFill")
+            setTimeout(() => {
+                setBgFillPositionTop('-70%')
+                setBgFillPositionLeft('-5%')
+                
+            }, 1990);
         }else{
-            setBgWelcomeBox("hsl(0, 100%, 50%, .4)")
+            setBgFillPositionTop('0%')
+            setBgFillPositionLeft('200%')
+            setBgFillId("")
             
         }
             
     }
 
 return (
-            <div className='welcome_box' id='animationWelcomeBox' style={{backgroundColor:bgWelcomeBox}}onClick={()=>showBgWelcomeBox()}>
+            <div className='welcome_box' id='animationWelcomeBox' style={{backgroundColor:bgWelcomeBox}} onClick={()=>showBgWelcomeBox()}>
+                <div className="welcome_background_effect" style={{top:bgFillPositionTop,left:bgFillPositionLeft}} id={bgFillId}></div>
                 <div className="welcome_photo"></div>
             </div>
        )
