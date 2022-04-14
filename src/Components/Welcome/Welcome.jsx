@@ -2,20 +2,22 @@ import React, {useEffect, useState} from 'react';
 import './Welcome.css';
 
 const Welcome = () => {
-    let animationWelcomeBox = document.getElementById('animationWelcomeBox')
 
+    const [bgWelcomeBox, setBgWelcomeBox] = useState("hsl(0, 100%, 50%, .4)");
 
-    const clicked = () =>  {
-        if (animationWelcomeBox?.style.opacity === 0.4) {
-            console.log('going inside if')
+    const showBgWelcomeBox = () => {
+        if(bgWelcomeBox === "hsl(0, 100%, 50%, .4)"){
+            setBgWelcomeBox("hsl(0, 100%, 50%, .9)")
+        }else{
+            setBgWelcomeBox("hsl(0, 100%, 50%, .4)")
+            
         }
-        else {
-            console.log('going inside else')
-        }
-      }
+            
+    }
 
 return (
-            <div className='welcome_box' id='animationWelcomeBox' onClick={()=>clicked()}>
+            <div className='welcome_box' id='animationWelcomeBox' style={{backgroundColor:bgWelcomeBox}}onClick={()=>showBgWelcomeBox()}>
+                <div className="welcome_photo"></div>
             </div>
        )
 }

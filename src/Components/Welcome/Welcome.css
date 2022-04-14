@@ -1,74 +1,73 @@
 .welcome_box {
-    background-color: hsl(0, 100%, 50%, 1);
+    background-color: hsl(0, 100%, 50%, .4);
 
     height: 70vh;
-    width: 50vw;
-
-    position: absolute;
-    left: 25vw;
-
+    width: 60vw;
     border-radius: .2em;
 
+    position: absolute;
+    left: 20vw;    
+
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
 
-    transition: 1s;
-    
-    
+    transition: 1s;   
 }
-/* 
-.welcome_box:hover {
-
-    animation: hoverWelcomeBox 1s reverse normal;
-
-} */
 
 @keyframes hoverWelcomeBox {
-    from{
-        
+    from{       
     background-color: hsl(0, 100%, 50%, .4);
         transform: scaleX(1.1);
-
     }
     to {
-        
     background-color: hsl(0, 100%, 50%, 1);
         transform: scaleX(1);
-
     }
 }
 
 @media only screen and (max-width: 1550px) {
     .welcome_box {
+    left: 7.5vw;    
     width: 85vw;
     }
   }
 
 @media only screen and (max-width: 750px) {
     .welcome_box {
-    width: 95vw;
+    left: 5vw;    
+    width: 90vw;
     }
   }
 
 #animationWelcomeBox {
-    opacity: 0.4;
-    animation: appearWelcomeBox 2s normal;
+    animation: appearWelcomeBox steps(20) 1.2s normal;
     /* hoverWelcomeBox 1s infinite; */
 }
 
 @keyframes appearWelcomeBox {
     0%{
-    transform: scaleX(0);
+    top: -25vh;    
+    transform: scaleX(0) scaleY(0);
     }
-    40%{
-       transform: scaleX(0); 
+    60%{
+       transform: scaleX(.01) scaleY(.035); 
     }
-    80%{
-       transform: scaleX(.6); 
+    75%{
+       top: 15vh;    
+       transform: scaleX(.03) scaleY(1); 
     }
     100%{
-       transform: scaleX(1); 
+    transform: scaleX(1); 
     }
+}
+
+/* squares inside */
+
+.welcome_photo {
+
+    height: 50%;
+    width: 50%;
+    background-image: url('https://avatars.githubusercontent.com/u/96541489?v=4');
 }
