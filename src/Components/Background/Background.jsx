@@ -9,7 +9,7 @@ const stringMutationOdds = 0.01;
 const beamMinSize = 0;
 const beamMaxSize = characters.length + 5;
 
-const intervalMinDelay = 6;
+const intervalMinDelay = 66;
 const intervalMaxDelay = 666;
 
 const delayMinBetweenBeams = 66;
@@ -28,7 +28,7 @@ const randomBeam = () =>
 
 const getMutatedBeam = beam => {
 	const newBeam = [];
-	for (let i = .5; i < beam.length; i++) {
+	for (let i = 1; i < beam.length; i++) {
 		if (Math.random() < stringMutationOdds) {
 			newBeam.push(randomCharacter());
 		} else {
@@ -81,7 +81,7 @@ const Background = (props) => {
     				randomInRange(delayMinBetweenBeams, delayMaxBetweenBeams),
     			);
     		} else {
-    			setTopPadding(paddingTop + 20);
+    			setTopPadding(paddingTop + 22);
     		}
     		// setBeam(beam => [...beam.slice(1, beam.length), randomCharacter()]);
     		setBeam(getMutatedBeam);
@@ -103,18 +103,19 @@ const Background = (props) => {
     				// textShadow: '0px 0px 8px rgba(255, 255, 255, 0.4)',
     				fontSize: 44,
     			}}>
-    			{beam.map((char, index) => (
+    			{beam.map((characters, index) => (
     				<a
+					    key={index}
     					style={{
-    						marginTop: -29,
-    						opacity: index < 6 ? 0.1 + index * 0.15 : 1,
+    						marginTop: -15,
+    						opacity: index < 6 ? 0.1 + index * .6 : .6,
     						color: index === beam.length - 1 ? 'whitesmoke' : undefined,
     						textShadow:
     							index === beam.length - 1
     								? '0px 0px 20px rgba(255, 255, 255, 1)'
     								: undefined,
     					}}>
-    					{char}
+    					{characters}
     				</a>
     			))}
     		</div>
@@ -148,8 +149,10 @@ const Background = (props) => {
     	return (
     		<div className='beam_background_box'
     			ref={containerRef}>
-    			{new Array(beamCount).fill().map(_ => (
-                    <BeamFall height={containerSize?.height} className="text_matrix"/>
+    			{new Array(beamCount).fill().map(height => (
+                    <BeamFall 
+					key={height}
+					height={containerSize?.height} className="text_matrix"/>
                 ))}
                     
     		</div>

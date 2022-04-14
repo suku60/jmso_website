@@ -1,0 +1,74 @@
+.welcome_box {
+    background-color: hsl(0, 100%, 50%, 1);
+
+    height: 70vh;
+    width: 50vw;
+
+    position: absolute;
+    left: 25vw;
+
+    border-radius: .2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 1s;
+    
+    
+}
+/* 
+.welcome_box:hover {
+
+    animation: hoverWelcomeBox 1s reverse normal;
+
+} */
+
+@keyframes hoverWelcomeBox {
+    from{
+        
+    background-color: hsl(0, 100%, 50%, .4);
+        transform: scaleX(1.1);
+
+    }
+    to {
+        
+    background-color: hsl(0, 100%, 50%, 1);
+        transform: scaleX(1);
+
+    }
+}
+
+@media only screen and (max-width: 1550px) {
+    .welcome_box {
+    width: 85vw;
+    }
+  }
+
+@media only screen and (max-width: 750px) {
+    .welcome_box {
+    width: 95vw;
+    }
+  }
+
+#animationWelcomeBox {
+    opacity: 0.4;
+    animation: appearWelcomeBox 2s normal;
+    /* hoverWelcomeBox 1s infinite; */
+}
+
+@keyframes appearWelcomeBox {
+    0%{
+    transform: scaleX(0);
+    }
+    40%{
+       transform: scaleX(0); 
+    }
+    80%{
+       transform: scaleX(.6); 
+    }
+    100%{
+       transform: scaleX(1); 
+    }
+}
