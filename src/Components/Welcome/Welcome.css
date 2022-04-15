@@ -45,7 +45,7 @@
   }
 
 #animationWelcomeBox {
-    animation: appearWelcomeBox steps(20) 1.2s normal;
+    animation: appearWelcomeBox steps(20) 1.1s normal;
     /* hoverWelcomeBox 1s infinite; */
 }
 
@@ -68,7 +68,7 @@
 
 .welcome_background_effect {
     background-color: red;
-    border-radius: 10%;
+    border-radius: 2%;
 
     height: 90em;
     width: 90em;
@@ -81,13 +81,21 @@
 
     top: -70%;
     left: -5%;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: visible;
     
     transform: rotate(15deg);
 
 }
 
 #animationBackgroundFill {
-    animation: rotation steps(10) 2s normal;
+    animation: rotation steps(10) .8s normal;
 }
 
 @keyframes rotation {
@@ -123,7 +131,37 @@
         }
 }
 
+/* plus effects */
 
+.welcome_background_effect_plus_1 {
+    background-color: inherit;
+    border-radius: inherit;
+
+    position: absolute;
+    z-index: 2;
+
+    top: 20%;
+    left: 90%;
+
+    height: 50%;
+    width: 20%;
+}
+
+.welcome_background_effect_plus_2 {
+    background-color: inherit;
+    border-radius: inherit;
+
+    color: beige;
+
+    position: absolute;
+    z-index: 3;
+
+    top: 11%;
+    left: 66%;
+
+    height: 90%;
+    width: 40%;
+}
 
 /* squares inside */
 
