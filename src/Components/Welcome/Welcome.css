@@ -241,3 +241,34 @@
       transform: scaleX(1);
     }
 }
+
+.welcome_name, .welcome_secondname, .welcome_surname{
+    position: absolute;
+
+    transform: scaleY(2);
+
+    height: 10%;
+
+    border: .1em solid red;
+    fill: rgb(54, 7, 7);
+
+}
+
+
+.welcome_name{
+    top: 30%;
+    left: 37%;
+
+}
+
+.welcome_secondname {
+    top: 45%;
+    left: 40%;
+
+}
+
+.welcome_surname{
+    top: 60%;
+    left: 40%;
+
+}

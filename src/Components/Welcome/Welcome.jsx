@@ -1,4 +1,7 @@
 import React, {useEffect, useState} from 'react';
+import {ReactComponent as NameSvg} from '../../assets/svg/name.svg';
+import {ReactComponent as SecondNameSvg} from '../../assets/svg/secondname.svg';
+import {ReactComponent as SurnameSvg} from '../../assets/svg/surname.svg';
 import './Welcome.css';
 
 const Welcome = () => {
@@ -36,6 +39,9 @@ return (
                 </div>
                 <div className="welcome_background_effect" id={screenInsideAnimation3}>
                 </div>
+                <NameSvg className='welcome_name'/>
+                <SecondNameSvg className='welcome_secondname'/>
+                <SurnameSvg className='welcome_surname'/>
                 <div className="welcome_photo"><img className='photo_avatar' id={screenInsideAnimation3} src='https://avatars.githubusercontent.com/u/96541489?v=4'/></div>
             </div>
        )

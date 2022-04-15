@@ -4,7 +4,6 @@ import Background from './Components/Background/Background';
 // import Background2 from './Components/Background2/Background2';
 import Home from './Containers/Home/Home';
 
-
 function App() {
   return (
     <div className="App">
