@@ -52,7 +52,7 @@
 }
 
 #animationIndicatorAppearing {
-    animation: translateIntoCenter .1s normal;
+    animation: translateIntoCenter .4s  normal;
 }
 
 @keyframes translateIntoCenter {

@@ -2,54 +2,41 @@ import React, {useEffect, useState} from 'react';
 import './Welcome.css';
 
 const Welcome = () => {
+    // declaring animations as variables;
+    let animationGlitch1 = "animationGlitchSquare1";
+    let animationGlitch2 = "animationGlitchSquare2";
+    let animationGlitch3 = "animationGlitchSquare3";
+    let animationOff = "staticInvisible";
 
     const [bgWelcomeBox, setBgWelcomeBox] = useState("hsl(0, 100%, 50%, .4)");
+    
+    const [screenAnimation, setScreenAnimation] = useState(animationOff)
+    
+    const [screenInsideAnimation1, setScreenInsideAnimation1] = useState(animationOff)
+    const [screenInsideAnimation2, setScreenInsideAnimation2] = useState(animationOff)
+    const [screenInsideAnimation3, setScreenInsideAnimation3] = useState(animationOff)
 
-    // declaring variants
-    let startingTransformation = 'scaleX(.01)';
+    setTimeout(() => {
+        setScreenAnimation('animationWelcomeBox')
+        setScreenInsideAnimation1(animationGlitch1)
+        setScreenInsideAnimation2(animationGlitch2)
+        setScreenInsideAnimation3(animationGlitch3)
+        
+    }, 2100);
 
-    let startingPositionTop = '-0%';
-    let startingPositionLeft = '-0%';
 
-    let endingPositionTop = '0%';
-    let endingPositionLeft = '0%';
 
-    let animationFilling = "animationBackgroundFill";
-    let animationGlitch = "animationGlitchSquare1";
     
 
-    const [bgFillPositionTop, setBgFillPositionTop] = useState(startingPositionTop)
-    const [bgFillPositionLeft, setBgFillPositionLeft] = useState(startingPositionLeft)
-    const [bgTransformation, setBgTransformation] = useState(startingTransformation)
-    const [bgFillId, setBgFillId] = useState('')
-
-    const showBgWelcomeBox = () => {
-        if(bgFillId === ""){
-            setBgFillId(animationFilling+' '+animationGlitch)
-            setTimeout(() => {
-                setBgFillPositionTop(endingPositionTop)
-                setBgFillPositionLeft(endingPositionLeft)
-                
-            }, 600);
-        }else{
-            setBgFillPositionTop(startingPositionTop)
-            setBgFillPositionLeft(startingPositionLeft)
-            setBgFillId("")
-            
-        }
-            
-    }
-
 return (
-            <div className='welcome_box' id='animationWelcomeBox' style={{backgroundColor:bgWelcomeBox}} onClick={()=>showBgWelcomeBox()}>
-                <div className="welcome_background_effect" style={{top:bgFillPositionTop,left:bgFillPositionLeft,transform:bgTransformation}} id={bgFillId}>
-                {/* <div className="pokemon_screen" id="animationGlitchSquare1"> 
-          </div> */}
-                    {/* <div className="welcome_background_effect_plus_1"></div>
-                    <div className="welcome_background_effect_plus_2"></div>
-                    <div className="welcome_background_effect_plus_3"></div> */}
+            <div className='welcome_box' id={screenAnimation} style={{backgroundColor:bgWelcomeBox}}>
+                <div className="welcome_background_effect" id={screenInsideAnimation1}>
                 </div>
-                {/* <div className="welcome_photo"></div> */}
+                <div className="welcome_background_effect" id={screenInsideAnimation2}>
+                </div>
+                <div className="welcome_background_effect" id={screenInsideAnimation3}>
+                </div>
+                {/* <div className="welcome_photo"><img className='photo_avatar' src='https://avatars.githubusercontent.com/u/96541489?v=4'/></div> */}
             </div>
        )
 }
