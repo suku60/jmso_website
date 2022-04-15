@@ -2,38 +2,41 @@ import React, {useEffect, useState} from 'react';
 import './Welcome.css';
 
 const Welcome = () => {
+    // declaring animations as variables;
+    let animationGlitch1 = "animationGlitchSquare1";
+    let animationGlitch2 = "animationGlitchSquare2";
+    let animationGlitch3 = "animationGlitchSquare3";
+    let animationOff = "staticInvisible";
 
     const [bgWelcomeBox, setBgWelcomeBox] = useState("hsl(0, 100%, 50%, .4)");
+    
+    const [screenAnimation, setScreenAnimation] = useState(animationOff)
+    
+    const [screenInsideAnimation1, setScreenInsideAnimation1] = useState(animationOff)
+    const [screenInsideAnimation2, setScreenInsideAnimation2] = useState(animationOff)
+    const [screenInsideAnimation3, setScreenInsideAnimation3] = useState(animationOff)
 
-    const [bgFillPositionTop, setBgFillPositionTop] = useState('0%')
-    const [bgFillPositionLeft, setBgFillPositionLeft] = useState('-200%')
-    const [bgFillId, setBgFillId] = useState('')
+    setTimeout(() => {
+        setScreenAnimation('animationWelcomeBox')
+        setScreenInsideAnimation1(animationGlitch1)
+        setScreenInsideAnimation2(animationGlitch2)
+        setScreenInsideAnimation3(animationGlitch3)
+        
+    }, 2100);
 
-    const showBgWelcomeBox = () => {
-        if(bgFillId === ""){
-            setBgFillId("animationBackgroundFill")
-            setTimeout(() => {
-                setBgFillPositionTop('-70%')
-                setBgFillPositionLeft('-5%')
-                
-            }, 600);
-        }else{
-            setBgFillPositionTop('0%')
-            setBgFillPositionLeft('200%')
-            setBgFillId("")
-            
-        }
-            
-    }
+
+
+    
 
 return (
-            <div className='welcome_box' id='animationWelcomeBox' style={{backgroundColor:bgWelcomeBox}} onClick={()=>showBgWelcomeBox()}>
-                <div className="welcome_background_effect" style={{top:bgFillPositionTop,left:bgFillPositionLeft}} id={bgFillId}>
-                    <div className="welcome_background_effect_plus_1"></div>
-                    <div className="welcome_background_effect_plus_2"></div>
-                    <div className="welcome_background_effect_plus_3"></div>
+            <div className='welcome_box' id={screenAnimation} style={{backgroundColor:bgWelcomeBox}}>
+                <div className="welcome_background_effect" id={screenInsideAnimation1}>
                 </div>
-                {/* <div className="welcome_photo"></div> */}
+                <div className="welcome_background_effect" id={screenInsideAnimation2}>
+                </div>
+                <div className="welcome_background_effect" id={screenInsideAnimation3}>
+                </div>
+                <div className="welcome_photo"><img className='photo_avatar' id={screenInsideAnimation3} src='https://avatars.githubusercontent.com/u/96541489?v=4'/></div>
             </div>
        )
 }
