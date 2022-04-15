@@ -1,3 +1,6 @@
+/* ADAPTIVE CSS */
+@import url('../../assets/css/adaptive.css');
+
 .home_box {
     /* design phase 1: done */
     background-color: transparent;
