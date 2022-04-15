@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
 /* ADAPTIVE CSS */
 @import url('../../assets/css/adaptive.css');
 
@@ -244,31 +247,43 @@
 
 .welcome_name, .welcome_secondname, .welcome_surname{
     position: absolute;
+    z-index: 3;
 
-    transform: scaleY(2);
+    background-color: black;
 
-    height: 10%;
+    transform:rotateX(7deg);
+
+
+    height: 20%;
 
     border: .1em solid red;
     fill: rgb(54, 7, 7);
 
+    font-family: 'Rubik Mono One', sans-serif;
+
 }
+
+.welcome_name:hover, .welcome_secondname:hover, .welcome_surname:hover{
+    font-family: 'Rubik Glitch', cursive;
+    font-size: 1.1em;
+}
+
 
 
 .welcome_name{
     top: 30%;
-    left: 37%;
+    left: 51.45%;
 
 }
 
 .welcome_secondname {
-    top: 45%;
+    top: 51%;
     left: 40%;
 
 }
 
 .welcome_surname{
-    top: 60%;
+    top: 72%;
     left: 40%;
 
 }
