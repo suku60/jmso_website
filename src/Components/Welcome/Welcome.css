@@ -1,3 +1,5 @@
+@import url('../../assets/css/adaptive.css');
+
 .welcome_box {
     background-color: hsl(0, 100%, 50%, .4);
     border: .11em solid red;
@@ -19,95 +21,11 @@
     transition: 1s;   
 }
 
-@keyframes hoverWelcomeBox {
-    from{       
-    background-color: hsl(0, 100%, 50%, .4);
-        transform: scaleX(1.1);
-    }
-    to {
-    background-color: hsl(0, 100%, 50%, 1);
-        transform: scaleX(1);
-    }
-}
 
-@media only screen and (max-width: 1550px) {
-    .welcome_box {
-    left: 7.5vw;    
-    width: 85vw;
-    } 
-    
-    .welcome_photo {
-        height: 50% !important;
-        
-    }
-
-    .photo_avatar {
-        height: 100%;
-
-        position: absolute;
-        top: 0%;
-        left: -0% !important;
-    }
-}
-@media only screen and (max-width: 1050px) {
-    .photo_avatar {
-        height: 100%;
-
-        position: absolute;
-        top: 0%;
-        left: -30% !important;
-    }
-} 
-
-@media only screen and (max-width: 800px) {
-
-  .welcome_photo {
-      height: 50% !important;
-      
-  }
-}  
-
-@media only screen and (max-width: 750px) {
-    .welcome_box {
-    left: 5vw;    
-    width: 90vw;
-    }
-    
-    .welcome_photo {
-        height: 30% !important;
-        width: 20% !important;
-        
-    }
-
-    .photo_avatar {
-        height: 100%;
-
-        position: absolute;
-        top: 0%;
-        left: -30% !important;
-    }
-  }
-
-@media only screen and (max-width: 500px) {
-    .welcome_photo {
-        height: 20% !important;
-        width: 20% !important;
-        
-    }
-    .photo_avatar {
-        height: 80%;
-
-        position: absolute;
-        top: 0%;
-        left: -50% !important;
-    }
-} 
 
 #animationWelcomeBox {
     animation: appearWelcomeBox steps(20) .7s normal;
-    /* hoverWelcomeBox 1s infinite; */
 }
-
 @keyframes appearWelcomeBox {
     0%{
     top: 100vh;    
@@ -186,7 +104,6 @@
 } */
 
 /* squares inside */
-
 .welcome_photo {
 
     height: 50%;
@@ -200,7 +117,6 @@
     z-index: 2;
 
 }
-
 .photo_avatar {
     height: 100%;
 
@@ -211,23 +127,20 @@
     
 }
 
-/* imported code from pokedex */
-
-  
 #animationGlitchSquare1 {
     animation: glitch1 1s infinite,
                screen_opening 3s normal;
-  }
+}
 #animationGlitchSquare2 {
     animation: glitch1 1s .9s infinite,
                screen_opening 3s .9s normal;
-  }
-  #animationGlitchSquare3 {
+}
+#animationGlitchSquare3 {
     animation: glitch1 1s .9s infinite,
                screen_opening 3s .3s normal;
-  }
+}
 
-  #staticInvisible {
+#staticInvisible {
       display: none;
       
       top: 200%;
@@ -286,9 +199,7 @@
       transform: none;
       opacity: 1;
     }
-  }
-
-  
+} 
 @keyframes screen_opening {
     0% {
       transform: scaleX(0);
@@ -328,4 +239,4 @@
     100% {
       transform: scaleX(1);
     }
-  }
+}
