@@ -3,11 +3,11 @@
     border: .11em solid red;
 
     height: 70vh;
-    width: 60vw;
+    width: 66vw;
     border-radius: .2em;
 
     position: absolute;
-    left: 20vw;    
+    left: 17vw;    
 
     display: flex;
     flex-direction: row;
@@ -34,20 +34,74 @@
     .welcome_box {
     left: 7.5vw;    
     width: 85vw;
+    } 
+    
+    .welcome_photo {
+        height: 50% !important;
+        
+    }
+
+    .photo_avatar {
+        height: 100%;
+
+        position: absolute;
+        top: 0%;
+        left: -0% !important;
     }
 }
+@media only screen and (max-width: 1050px) {
+    .photo_avatar {
+        height: 100%;
+
+        position: absolute;
+        top: 0%;
+        left: -30% !important;
+    }
+} 
+
+@media only screen and (max-width: 800px) {
+
+  .welcome_photo {
+      height: 50% !important;
+      
+  }
+}  
 
 @media only screen and (max-width: 750px) {
     .welcome_box {
     left: 5vw;    
     width: 90vw;
     }
+    
+    .welcome_photo {
+        height: 30% !important;
+        width: 20% !important;
+        
+    }
+
     .photo_avatar {
         height: 100%;
+
         position: absolute;
-        left: -40%;
+        top: 0%;
+        left: -30% !important;
     }
   }
+
+@media only screen and (max-width: 500px) {
+    .welcome_photo {
+        height: 20% !important;
+        width: 20% !important;
+        
+    }
+    .photo_avatar {
+        height: 80%;
+
+        position: absolute;
+        top: 0%;
+        left: -50% !important;
+    }
+} 
 
 #animationWelcomeBox {
     animation: appearWelcomeBox steps(20) .7s normal;
@@ -138,16 +192,22 @@
     height: 50%;
     width: 26%;
     
-    border-radius: 10%;
+    border-radius: .9rem;
 
 
     position: absolute;
 
     z-index: 2;
+
 }
 
 .photo_avatar {
     height: 100%;
+
+    position: absolute;
+    
+    top: 0%;
+    left: 0%;
     
 }
 

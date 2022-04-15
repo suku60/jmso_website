@@ -36,7 +36,7 @@ return (
                 </div>
                 <div className="welcome_background_effect" id={screenInsideAnimation3}>
                 </div>
-                {/* <div className="welcome_photo"><img className='photo_avatar' src='https://avatars.githubusercontent.com/u/96541489?v=4'/></div> */}
+                <div className="welcome_photo"><img className='photo_avatar' id={screenInsideAnimation3} src='https://avatars.githubusercontent.com/u/96541489?v=4'/></div>
             </div>
        )
 }

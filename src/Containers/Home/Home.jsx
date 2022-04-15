@@ -20,7 +20,9 @@ return (
            <Loader/>
            <Welcome/>
            <div className="home_footer">
-               <div className="home_footer_center_indicator" style={{top:trianglePositionTop}} id={triangleAnimation}></div>
+               <div className="home_footer_center_indicator" style={{top:trianglePositionTop}} id={triangleAnimation}>
+                   <div className="indicator_heart"></div>
+               </div>
            </div>
        
        </div>
