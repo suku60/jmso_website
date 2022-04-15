@@ -14,7 +14,7 @@
     justify-content: space-around;
     align-items: center;
 
-    overflow: hidden;
+    overflow: visible;
 
     transition: 1s;   
 }
@@ -45,21 +45,21 @@
   }
 
 #animationWelcomeBox {
-    animation: appearWelcomeBox steps(20) 1.1s normal;
+    animation: appearWelcomeBox steps(20) .8s normal;
     /* hoverWelcomeBox 1s infinite; */
 }
 
 @keyframes appearWelcomeBox {
     0%{
-    top: -25vh;    
+    top: 200vh;    
     transform: scaleX(0) scaleY(0);
     }
     60%{
        transform: scaleX(.01) scaleY(.035); 
     }
     75%{
-       top: 15vh;    
-       transform: scaleX(.03) scaleY(1); 
+       top: 30vh;    
+       transform: scaleX(.03) scaleY(1.3); 
     }
     100%{
     transform: scaleX(1); 
@@ -67,20 +67,20 @@
 }
 
 .welcome_background_effect {
-    background-color: red;
+    background-color: hsl(0, 100%, 50%, .7);
     border-radius: 2%;
 
-    height: 90em;
-    width: 90em;
+    height: 100%;
+    width: 100%;
     
     position: absolute;
     z-index: 1;
     /* initial */
     /* top: 0%;
     left: -200%; */
-
+/* 
     top: -70%;
-    left: -5%;
+    left: -5%; */
 
     
     display: flex;
@@ -90,7 +90,7 @@
 
     overflow: visible;
     
-    transform: rotate(5deg);
+    /* transform: rotate(5deg); */
 
 }
 
@@ -100,39 +100,39 @@
 
 @keyframes rotation {
     0%{
-    top: -0%;
-    left: -200%;
-    transform: rotate(50deg);
+    /* top: -0%; */
+    /* left: -200%; */
+    /* transform: rotate(50deg); */
     }
     10%{
-        top: -10%;
-        left: -135%;
-        transform: rotate(55deg);   
+        /* top: -10%; */
+        /* left: -135%; */
+        /* transform: rotate(55deg);    */
     }
     25%{
-    top: -20%;
-    left: -115%;
-        transform: rotate(58deg);
+    /* top: -20%; */
+    /* left: -115%; */
+        /* transform: rotate(58deg); */
     }
     50%{
-    top: -30%;
-    left: -105%;
-        transform: rotate(65deg);
+    /* top: -30%; */
+    /* left: -105%; */
+        /* transform: rotate(65deg); */
     }
     75%{
-    top: -50%;
-    left: -55%;
-    transform: rotate(80deg);
+    /* top: -50%; */
+    /* left: -55%; */
+    /* transform: rotate(80deg); */
     }
     100%{
-    top: -70%;
-    left: -5%;
-        transform: rotate(10deg);
+    /* top: -70%; */
+    /* left: -5%; */
+        /* transform: rotate(10deg); */
         }
 }
 
 /* plus effects */
-
+/* 
 .welcome_background_effect_plus_1 {
     background-color: inherit;
     border-radius: inherit;
@@ -161,7 +161,7 @@
 
     height: 90%;
     width: 40%;
-}
+} */
 
 /* squares inside */
 
@@ -176,3 +176,125 @@
 
     z-index: 2;
 }
+
+/* imported code from pokedex */
+
+
+.pokemon_screen {
+    background-color: hsla(270, 96%, 54%, 0.1);
+  
+  
+    height: 100%;
+    width: 100%;
+  
+    position: absolute;
+    z-index: 2;
+    
+    top: 0%;
+    left: 0%;
+  
+  }
+
+  
+#animationGlitchSquare1 {
+    color: #fff;
+    animation: glitch1 1s infinite,
+               screen_opening 3s normal;
+  }
+  
+@keyframes glitch1 {
+    0% {
+      transform: none;
+      opacity: 1;
+    }
+    7% {
+      transform: skew(-0.5deg, -0.9deg);
+      opacity: 0.75;
+    }
+    10% {
+      transform: none;
+      opacity: 1;
+    }
+    27% {
+      transform: none;
+      opacity: 1;
+    }
+    30% {
+      transform: skew(0.8deg, -0.1deg);
+      opacity: 0.75;
+    }
+    35% {
+      transform: none;
+      opacity: 1;
+    }
+    52% {
+      transform: none;
+      opacity: 1;
+    }
+    55% {
+      transform: skew(-1deg, 0.2deg);
+      opacity: 0.75;
+    }
+    50% {
+      transform: none;
+      opacity: 1;
+    }
+    72% {
+      transform: none;
+      opacity: 1;
+    }
+    75% {
+      transform: skew(0.4deg, 1deg);
+      opacity: 0.75;
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  
+@keyframes screen_opening {
+    0% {
+      transform: scaleY(0);
+    }
+    7% {
+      transform: scaleY(0.15);
+    }
+    10% {
+      transform: scaleY(0.1);
+    }
+    27% {
+      transform: scaleY(0.15);
+    }
+    30% {
+    }
+    35% {
+      transform: scaleY(0.7);
+    }
+    52% {
+      transform: none;
+    }
+    55% {
+      transform: scaleY(0.8);
+    }
+    50% {
+      transform: scaleY(0.85);
+    }
+    72% {
+      transform: scaleY(0.9);
+    }
+    75% {
+      transform: scaleY(0.91);
+    }
+    80% {
+      transform: scaleY(.95);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
