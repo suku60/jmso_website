@@ -48,7 +48,7 @@ const Background = (props) => {
     const BeamFall = props => {
         const [beam, setBeam] = useState(randomBeam());
     
-    	const [paddingTop, setTopPadding] = useState(beam.length * randomInRange.length);
+    	const [paddingTop, setTopPadding] = useState(-beam.length*beam.length*6);
     
     	const [intervalDelay, setIntervalDelay] = useState(null);
     
@@ -71,7 +71,7 @@ const Background = (props) => {
     			setBeam([]);
     			const newBeam = randomBeam();
     			setBeam(newBeam);
-    			setTopPadding(newBeam.length * -44);
+    			setTopPadding(newBeam.length * -10);
     			setIntervalDelay(null);
     			setTimeout(
     				() =>
@@ -81,7 +81,7 @@ const Background = (props) => {
     				randomInRange(delayMinBetweenBeams, delayMaxBetweenBeams),
     			);
     		} else {
-    			setTopPadding(paddingTop + 22);
+    			setTopPadding(paddingTop + 44);
     		}
     		// setBeam(beam => [...beam.slice(1, beam.length), randomCharacter()]);
     		setBeam(getMutatedBeam);
@@ -91,7 +91,7 @@ const Background = (props) => {
     		<div  
             // id="animation"
     			style={{
-                    transition: '.6s',
+                    transition: 's',
     				writingMode: writingMode,
     				color: '#F23030',
     				textOrientation: textOrientation,
