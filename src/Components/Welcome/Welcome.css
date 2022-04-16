@@ -4,9 +4,10 @@
 /* ADAPTIVE CSS */
 @import url('../../assets/css/adaptive.css');
 
-.welcome_box {
-    background-color: hsl(0, 100%, 50%, .4);
-    border: .11em solid red;
+.welcome_box {    
+  background-color: var(--color-red-2);
+
+    border: .11em solid var(--color-red-1);
 
     height: 70vh;
     width: 66vw;
@@ -45,7 +46,7 @@
 }
 
 .welcome_background_effect {
-    background-color: hsl(0, 100%, 50%, .05);
+    background-color: var(--color-red-0);
     border-radius: 2%;
 
     height: 100%;
@@ -245,45 +246,84 @@
     }
 }
 
-.welcome_name, .welcome_secondname, .welcome_surname{
+.welcome_name, 
+.welcome_secondname, 
+.welcome_secondname2,  
+.welcome_surname, 
+.welcome_surname2, 
+.welcome_frontend{
     position: absolute;
-    z-index: 3;
+    z-index: 4;
 
-    background-color: black;
+    background-color: transparent;
 
-    transform:rotateX(7deg);
+    letter-spacing: 1%;
+
+    overflow: hidden;
+
+    transform: scale(.6);
 
 
-    height: 20%;
 
-    border: .1em solid red;
-    fill: rgb(54, 7, 7);
 
-    font-family: 'Rubik Mono One', sans-serif;
+    /* border: .1em solid red; */
 
 }
 
-.welcome_name:hover, .welcome_secondname:hover, .welcome_surname:hover{
-    font-family: 'Rubik Glitch', cursive;
-    font-size: 1.1em;
+.welcome_name:hover, 
+.welcome_secondname:hover, 
+.welcome_secondname2:hover,  
+.welcome_surname:hover, 
+.welcome_surname2:hover, 
+.welcome_frontend:hover{
+  fill: red;
+
 }
+
 
 
 
 .welcome_name{
-    top: 30%;
-    left: 51.45%;
+    top: 9%;
+    right: 28%;
+  fill: blue;
+
 
 }
 
 .welcome_secondname {
-    top: 51%;
-    left: 40%;
+  top: 17.3%;   
+  right: 32%;
+
+  fill: blue;
+
+
+}
+.welcome_secondname2 {
+  top: 17%;   
+  right: 17%;
+  fill: blue;
 
 }
 
 .welcome_surname{
-    top: 72%;
-    left: 40%;
+  top: 26%;   
+  right: 42%;
+  fill: blue;
+
+
+}
+.welcome_surname2{
+  top: 26.3%;   
+  right: 26%;
+  fill: blue;
+
+
+}
+.welcome_frontend{
+  top: 14%;   
+  right: 0%;
+  fill: blue;
+
 
 }

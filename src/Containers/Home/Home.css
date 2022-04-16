@@ -15,10 +15,11 @@
     align-items: center;
 }
 
-.home_footer {
-    background-color: hsl(0, 100%, 50%, .6);
+.home_footer {    
+    background-color: var(--color-red-0-2);
 
-    border: .1em solid red;
+    border: .11em solid var(--color-red-1);
+
 
     position: absolute;
 
@@ -38,9 +39,9 @@
 }
 
 .home_footer_center_indicator {
-    background-color: hsl(0, 100%, 50%, .7);
+    background-color: var(--color-red-1);
+    border: .11em solid var(--color-red-1);
 
-    border: .1em solid red;
 
     position: absolute;
 

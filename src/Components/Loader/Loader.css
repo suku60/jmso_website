@@ -1,6 +1,6 @@
 
 .loader_box {
-    background-color: hsl(0, 100%, 50%, .4);
+    background-color: var(--color-red-2);
     border-radius: .2em;
 
 
