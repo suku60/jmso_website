@@ -42,7 +42,7 @@ return (
                 <NameSvg className='welcome_name'/>
                 <SecondNameSvg className='welcome_secondname'/>
                 <SurnameSvg className='welcome_surname'/>
-                <div className="welcome_photo"><img className='photo_avatar' id={screenInsideAnimation3} src='https://avatars.githubusercontent.com/u/96541489?v=4'/></div>
+                {/* <div className="welcome_photo"><img className='photo_avatar' id={screenInsideAnimation3} src='https://avatars.githubusercontent.com/u/96541489?v=4'/></div> */}
             </div>
        )
 }

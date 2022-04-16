@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Background/>
+        {/* <Background/> */}
         {/* <Background2/> */}
         <Routes>
         <Route path="/" element={<Home id="animationPageTransition"/>}/>
