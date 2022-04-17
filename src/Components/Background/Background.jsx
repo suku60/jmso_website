@@ -93,7 +93,7 @@ const Background = (props) => {
     			style={{
                     transition: 's',
     				writingMode: writingMode,
-    				color: '#F23030',
+    				color: '#ff0677',
     				textOrientation: textOrientation,
     				userSelect: 'none',
     				whiteSpace: 'nowrap',

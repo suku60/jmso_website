@@ -1,4 +1,8 @@
 import React, {useEffect, useState} from 'react';
+
+import {ReactComponent as OrnamentSideSvg} from '../../assets/svg/cyberOrnamentSide.svg';
+import {ReactComponent as OrnamentTopSvg} from '../../assets/svg/cyberOrnamentTop.svg';
+
 import {ReactComponent as NameSvg} from '../../assets/svg/name.svg';
 import {ReactComponent as SecondNameSvg} from '../../assets/svg/secondname.svg';
 import {ReactComponent as SecondName2Svg} from '../../assets/svg/secondname2.svg';
@@ -14,7 +18,7 @@ const Welcome = () => {
     let animationGlitch3 = "animationGlitchSquare3";
     let animationOff = "staticInvisible";
 
-    const [bgWelcomeBox, setBgWelcomeBox] = useState('var(--color-red-0-2)');
+    const [bgWelcomeBox, setBgWelcomeBox] = useState('var(--color-red-0)');
     
     const [screenAnimation, setScreenAnimation] = useState(animationOff)
     
@@ -42,13 +46,17 @@ return (
                 </div>
                 <div className="welcome_background_effect" id={screenInsideAnimation3}>
                 </div>
+                <OrnamentTopSvg className='welcome_ornament_top'/>
+                <OrnamentSideSvg className='welcome_ornament_side'/>
+                
+                
                 <NameSvg className='welcome_name'/>
                 <SecondNameSvg className='welcome_secondname'/>
                 <SecondName2Svg className='welcome_secondname2'/>
                 <SurnameSvg className='welcome_surname'/>
                 <Surname2Svg className='welcome_surname2'/>
                 <FrontendSvg className='welcome_frontend'/>
-                <div className="welcome_photo"><img className='photo_avatar' id={screenInsideAnimation3} src='https://avatars.githubusercontent.com/u/96541489?v=4'/></div>
+                {/* <div className="welcome_photo"><img className='photo_avatar' id={screenInsideAnimation3} src='https://avatars.githubusercontent.com/u/96541489?v=4'/></div> */}
             </div>
        )
 }

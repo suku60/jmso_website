@@ -11,7 +11,7 @@
 
     height: 70vh;
     width: 66vw;
-    border-radius: .2em;
+    border-radius: .9rem;
 
     position: absolute;
     left: 17vw;    
@@ -261,7 +261,8 @@
 
     overflow: hidden;
 
-    transform: scale(.6);
+    transform: scale(.6); 
+    transition: .1s;
 
 
 
@@ -269,14 +270,24 @@
     /* border: .1em solid red; */
 
 }
-
-.welcome_name:hover, 
-.welcome_secondname:hover, 
 .welcome_secondname2:hover,  
-.welcome_surname:hover, 
 .welcome_surname2:hover, 
+.welcome_name:hover {
+  
+  fill:  var(--color-blue-1);
+
+  transform: scale(.6) rotateX(5deg) rotateZ(-1deg); 
+  transition: .1s;                    
+
+}
+
+.welcome_surname:hover, 
+.welcome_secondname:hover, 
 .welcome_frontend:hover{
-  fill: red;
+  fill:  var(--color-red-1);
+
+  transform: scale(.6) rotateX(5deg) rotateZ(1deg);
+  transition: .1s;
 
 }
 
@@ -286,7 +297,7 @@
 .welcome_name{
     top: 9%;
     right: 28%;
-  fill: blue;
+  fill: var(--color-rose-1-1);
 
 
 }
@@ -295,35 +306,51 @@
   top: 17.3%;   
   right: 32%;
 
-  fill: blue;
+  fill: var(--color-rose-1-1);
 
 
 }
 .welcome_secondname2 {
   top: 17%;   
   right: 17%;
-  fill: blue;
+  fill: var(--color-rose-1-1);
 
 }
 
 .welcome_surname{
   top: 26%;   
   right: 42%;
-  fill: blue;
+  fill: var(--color-rose-1-1);
 
 
 }
 .welcome_surname2{
   top: 26.3%;   
   right: 26%;
-  fill: blue;
+  fill: var(--color-rose-1-1);
 
 
 }
 .welcome_frontend{
   top: 14%;   
   right: 0%;
-  fill: blue;
+  fill: var(--color-rose-3-2);
 
+
+}
+
+.welcome_ornament_top {
+
+  position: absolute;
+  top: -10%;
+  left: .5%;
+
+}
+
+.welcome_ornament_side {
+
+  position: absolute;
+  top: -2.5%;
+  left: -3%;
 
 }
