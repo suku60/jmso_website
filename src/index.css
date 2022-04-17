@@ -30,6 +30,15 @@
   --color-rose-2: hsl(300, 100%, 40%);
   --color-rose-3: hsl(300, 100%, 10%);
   --color-rose-3-2: hsl(300, 30%, 50%);
+  
+  
+  --color-yellow-0: hsl(59, 100%, 55%, 0.05);
+  --color-yellow-0-2: hsl(59, 100%, 55%, 0.4);
+  --color-yellow-1: hsl(59, 100%, 55%);
+  --color-yellow-1-1: hsl(59, 100%, 95%);
+  --color-yellow-2: hsl(59, 100%, 45%);
+  --color-yellow-3: hsl(59, 100%, 15%);
+  --color-yellow-3-2: hsl(59, 30%, 55%);
 
 
 }

@@ -1,11 +1,11 @@
 <svg width="146" height="767" viewBox="0 0 146 767" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="146" height="767" fill="transparent"/>
-<rect width="20" height="400" fill="var(--color-rose-2)"/>
-<rect y="7" width="7" height="146" transform="rotate(-90 0 7)" fill="var(--color-rose-2)"/>
-<path d="M10 434.503L0.0107076 400L20.0107 400.006L10 434.503Z" fill="var(--color-rose-2)"/>
-<path d="M10.0054 580.003L20.0054 620.003H0.00535583L10.0054 580.003Z" fill="var(--color-rose-2)"/>
-<path d="M0.0317807 619.95L20 619.95L15.5146 633.479L0.0317807 619.95Z" fill="var(--color-rose-2)"/>
-<line x1="10" y1="588" x2="10" y2="406" stroke="var(--color-rose-2)" stroke-width="4"/>
-<line x1="1.31559" y1="618.494" x2="31.4435" y2="644.805" stroke="var(--color-rose-2)" stroke-width="4"/>
-<line x1="59.1511" y1="668.463" x2="28.703" y2="642.522" stroke="var(--color-rose-2)" stroke-width="4"/>
+<rect width="20" height="400" fill="var(--color-rose-3-2)"/>
+<rect y="7" width="7" height="146" transform="rotate(-90 0 7)" fill="var(--color-rose-3-2)"/>
+<path d="M10 434.503L0.0107076 400L20.0107 400.006L10 434.503Z" fill="var(--color-rose-3-2)"/>
+<path d="M10.0054 580.003L20.0054 620.003H0.00535583L10.0054 580.003Z" fill="var(--color-rose-3-2)"/>
+<path d="M0.0317807 619.95L20 619.95L15.5146 633.479L0.0317807 619.95Z" fill="var(--color-rose-3-2)"/>
+<line x1="10" y1="588" x2="10" y2="406" stroke="var(--color-rose-3-2)" stroke-width="4"/>
+<line x1="1.31559" y1="618.494" x2="31.4435" y2="644.805" stroke="var(--color-rose-3-2)" stroke-width="4"/>
+<line x1="59.1511" y1="668.463" x2="28.703" y2="642.522" stroke="var(--color-rose-3-2)" stroke-width="4"/>
 </svg>
